@@ -75,7 +75,7 @@ awk -F "\t" '{print NF; exit}' temp_maize_header.txt
 cat temp_maize_header.txt temp_sorted_maize_genotypes.txt > temp_sorted_maize_complete.txt
 
 ```
-6. here we checked to make sure that the number of columns (1574) is the same for the two files then cat command combines two files, tem_maize_header and tem_sorted_maize_genotypes, into a single file named tem_sorted_maize_complete
+6. here we checked to make sure that the number of columns (1574) is the same for the two files then cat command combines two files, tem_maize_header and temp_sorted_maize_genotypes, into a single file named temp_sorted_maize_complete
 
 ```
 awk -F "\t" '{print NF; exit}' temp_position_header.txt
