@@ -65,7 +65,7 @@ $ grep -v "^Sample" temp_transposed_maize_genotypes.txt | sort -k1,1 > temp_sort
 
 ```
 head -n 1 temp_transposed_maize_genotypes.txt > temp_maize_header.txt
-head -n 1 tem_positions.txt > tem_position_header.txt
+head -n 1 temp_positions.txt > temp_position_header.txt
 
 ```
 5. Here head is used to extract the first line from the file temp_transposed_maize_genotypes.txt and redirects (>) that line into a new file called temp_maize_header.txt. Essentially, it's taking the header (which is usually the first line in a file containing column names or some sort of titles) from a transposed genotype data file and saving it separately. 
