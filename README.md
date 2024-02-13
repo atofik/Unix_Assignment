@@ -40,10 +40,11 @@ by inspecting the file i learned that
 
 ## Data processing
 ```
+grep -E "(Group|ZMMIL|ZMMLR|ZMMMR)" fang_et_al_genotypes.txt | cut --complement -f 2-3 > tem_maize_genotypes.txt
 awk -f transpose.awk tem_maize_genotypes.txt > tem_transposed_maize_genotypes.txt
 ```
 
-1. This command uses awk, a powerful text processing tool, to apply a script called transpose.awk on the file tem_maize_genotypes.txt and then redirects the output to a new file named
+1. the grep command here is extracting the maize genotype and redirecting it to a new file. Then the awk command uses awk to transpose.awk on the file tem_maize_genotypes.txt and then redirects the output to a new file 
 
 ```
 cut -f 1,3,4 snp_position.txt > tem_positions.txt
