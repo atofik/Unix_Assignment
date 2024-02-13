@@ -48,7 +48,11 @@ $ tail -n +2 snp_position.txt | cut -f1-2 | column -t
 
 
 ## Data processing
-###Maize data
+
+## Maize data
+
+Group ZMMIL, ZMMLR, and ZMMMR
+
 ```
 $ grep -E "(Group|ZMMIL|ZMMLR|ZMMMR)" fang_et_al_genotypes.txt | cut --complement -f 2-3 > temp_maize_genotypes.txt
 $ awk -f transpose.awk temp_maize_genotypes.txt > temp_transposed_maize_genotypes.txt
@@ -149,8 +153,9 @@ rm temp*
 17. deleted all the temp files
 
 
-###Teosinte
-ZMPBA, ZMPIL, and ZMPJA
+## Teosinte
+
+Group ZMPBA, ZMPIL, and ZMPJA
 
 ```
 $ grep -E "(Group|ZMPBA|ZMPIL|ZMPJA)" fang_et_al_genotypes.txt | cut --complement -f 2-3 > temp_teosinte_genotypes.txt
