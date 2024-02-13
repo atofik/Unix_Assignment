@@ -71,7 +71,7 @@ head -n 1 temp_positions.txt > temp_position_header.txt
 5. Here head is used to extract the first line from the file temp_transposed_maize_genotypes.txt and redirects (>) that line into a new file called temp_maize_header.txt. Essentially, it's taking the header (which is usually the first line in a file containing column names or some sort of titles) from a transposed genotype data file and saving it separately. 
 ```
 awk -F "\t" '{print NF; exit}' temp_sorted_maize_genotypes.txt
-awk -F "\t" '{print NF; exit}' temp_maize_genotypes.txt
+awk -F "\t" '{print NF; exit}' temp_maize_header.txt
 cat tem_maize_header.txt temp_sorted_maize_genotypes.txt > temp_sorted_maize_complete.txt
 
 ```
