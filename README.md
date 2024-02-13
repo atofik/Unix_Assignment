@@ -64,6 +64,12 @@ $ grep -v "^Sample" temp_transposed_maize_genotypes.txt | sort -k1,1 > temp_sort
 4. This command removes lines from temp_transposed_maize_genotypes.txt that start with "Sample", sorts the remaining lines based on the first field, and saves the sorted data to a new file called temp_sorted_maize_genotypes
 
 ```
+head -n 1 temp_transposed_maize_genotypes.txt > temp_maize_header.txt
+head -n 1 tem_positions.txt > tem_position_header.txt
+
+```
+5. Here head is used to extract the first line from the file temp_transposed_maize_genotypes.txt and redirects (>) that line into a new file called temp_maize_header.txt. Essentially, it's taking the header (which is usually the first line in a file containing column names or some sort of titles) from a transposed genotype data file and saving it separately. 
+```
 awk -F "\t" '{print NF; exit}' temp_sorted_maize_genotypes.txt
 awk -F "\t" '{print NF; exit}' temp_maize_genotypes.txt
 cat tem_maize_header.txt temp_sorted_maize_genotypes.txt > temp_sorted_maize_complete.txt
